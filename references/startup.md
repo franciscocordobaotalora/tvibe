@@ -1,6 +1,6 @@
 # Open on power on
 
-Samsung does not let an ordinary TV app force itself to start at boot. Its Seller Office rejects `on-boot` and `auto-restart`, and prelaunch is not available on 2019 and newer TVs. The honest, working answer on a 2023 TV:
+Samsung's documentation says ordinary TV apps cannot force themselves to start at boot: the Seller Office registration rules reject `on-boot` and `auto-restart` ([registering applications](https://developer.samsung.com/tv-seller-office/guides/applications/registering-application.html)), and prelaunch is not supported on 2019 and newer TVs ([prelaunch guide](https://developer.samsung.com/smarttv/develop/guides/fundamentals/prelaunching-applications.html)). Check those pages for your model. What worked on the 2023 TV we tested:
 
 1. **Settings, All Settings, General & Privacy, Start Screen Options**.
 2. Turn **Start with Smart Hub Home** off.

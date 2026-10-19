@@ -1,8 +1,8 @@
 # tvibe
 
-**Vibe code your TV.** Tell an AI your TV's model number. It builds a custom home dashboard, gets the Samsung certificate, and installs it on your TV. You write no code.
+**Vibe code your TV.** Tell an AI your TV's model number. It walks you through it, builds a custom home dashboard, and installs it on your TV. You write no code. You do the TV button presses and the Samsung sign-in; the AI does the rest.
 
-Built in one afternoon on a real Samsung TV. Samsung first. Android TV and LG next.
+Born from one afternoon on a real Samsung TV. Samsung first. Android TV and LG next.
 
 > Made by **Francisco Cordoba Otalora** ([@fcordobaot](https://x.com/fcordobaot)).
 
@@ -10,7 +10,7 @@ Built in one afternoon on a real Samsung TV. Samsung first. Android TV and LG ne
 
 - A clean, full-screen dashboard for your TV: clock, greeting, wallpaper, and big cards for the apps you use.
 - A **step-by-step skill** any LLM coding agent can follow: ten steps, each with the exact prompt to give it.
-- The traps already solved: the Developer Mode keypad, the Samsung certificate, "transferred" installs that install nothing, wrong app IDs.
+- The traps we hit and how we got past them: the Developer Mode keypad, the Samsung certificate, "transferred" installs that install nothing, wrong app IDs.
 
 ## How it works
 
@@ -42,15 +42,21 @@ You need: a Samsung smart TV that runs Tizen, a computer on the same WiFi, a fre
 
 | TV | Result |
 |---|---|
-| Samsung UE43CU7172 (2023 Crystal UHD) | Full flow works, including power-on resume |
+| Samsung UE43CU7172 (2023 Crystal UHD) | The full flow was proven end to end with the original dashboard this template comes from, including power-on resume |
+
+**Honest status:** this cleaned template renders correctly in a desktop browser. It has not yet been installed on a TV as a separate package, and it has been tested on one TV model only. It requires Tizen 7.0 or newer (`required_version` in `template/app/config.xml`); lower it for older TVs at your own risk. If you install it, please open an issue or pull request with your model and result.
 
 Tried it on another model? Open a pull request and add a row.
+
+The manifest and CLI commands are the ones that worked on the TV above. Samsung's own samples sometimes differ (for example the `tizen:profile` name), so validate in Tizen Studio if Samsung's tools complain.
 
 ## What it can't do
 
 - It does not replace Samsung's home screen. It opens from your Apps list.
 - It cannot force itself to start at boot. Samsung does not allow that for normal apps. The TV's **Autorun Last App** setting opens it after power-on when it was the last app you used.
 - App IDs differ between models and regions, so the agent reads them from your TV.
+- Samsung sign-in and the certificate screens need you, in your browser. The agent guides you and runs the commands.
+- Developer Mode opens a debug port. Use it on a trusted network and turn it off when you finish.
 
 ## Safety and legal
 

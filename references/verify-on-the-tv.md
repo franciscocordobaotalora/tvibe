@@ -12,3 +12,8 @@ Rules that came from real mistakes:
 - If the launcher icon does not change after an update, **uninstall the app and install it again**. The TV keeps the old tile.
 - Change the version in `config.xml` (both the widget and the application) for every update.
 - Show the problem with a photo. Words like "it looks off" give the LLM nothing to fix.
+
+## When you are done
+
+- Developer Mode opens a debug port on your TV. Use it only on a network you trust. When you finish, turn Developer Mode off (Apps, App Settings, the same panel) unless you plan to keep updating the app.
+- Disconnect the bridge: `sdb disconnect <TV_IP>:26101`.

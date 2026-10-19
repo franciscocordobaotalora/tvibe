@@ -6,7 +6,7 @@ Samsung TVs refuse apps signed with a self-generated certificate. You need an **
 
 - A free Samsung account (developer.samsung.com).
 - Tizen Studio with the **Samsung Certificate Extension 2.0.73 or newer** and the TV extension. Older extensions cannot create certificates.
-- The TV's DUID: **Settings, Support, About This TV** (on some firmware under Contact Samsung). Send a photo to your LLM and let it read the value.
+- The TV's DUID: **Settings, Support, About This TV** (on some firmware under Contact Samsung). Crop a photo to show only the Unique Device ID line and send that to your LLM, or type the ID yourself. Do not post the full About screen anywhere public.
 
 ## Steps (official route)
 
@@ -21,5 +21,6 @@ Your LLM can walk you through this, run the Tizen command-line tools, and tell y
 
 - Never commit `.p12`, `.pwd` or the profile files. The `.gitignore` in this repo blocks them.
 - Never paste them into a chat or a screenshot.
-- **Keep the same author certificate.** An update signed with a different author certificate installs as a new app.
+- **Keep the same author certificate.** An update must be signed with the same author certificate as the installed app. With a different one the TV may refuse the update, and you may have to uninstall the app first.
+- Never paste certificate files, `.p12` files or their passwords into a chat with the LLM. The LLM needs the Unique Device ID and the commands to run. You type passwords yourself, in your own terminal.
 - The DUID identifies your TV. Do not publish it in photos, logs or posts. Blur it.

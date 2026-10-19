@@ -5,3 +5,8 @@ signing/
 *.pwd
 *.pfx
 .env
+profiles.xml
+*.log
+author*
+distributor*
+.tizen-studio-data/

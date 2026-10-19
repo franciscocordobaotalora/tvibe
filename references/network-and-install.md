@@ -10,13 +10,15 @@ sdb connect <TV_IP>:26101
 sdb devices
 ```
 
-3. Sign, install and launch with the full Tizen CLI. Run them in the **same terminal session**, because the sdb server can exit between sessions:
+3. Sign, install and launch with the full Tizen CLI. If you drive the TV through remote shell sessions, the sdb server can end with the session, so run connect, install and launch in the same command sequence:
 
 ```
 ./sign.sh <profile-name>
 tizen install -s <TV_IP>:26101 --name TvibeDash.signed.wgt -- build
 tizen run -s <TV_IP>:26101 -p TVIBEDASH1.TvibeDash
 ```
+
+Syntax shown here worked with the Tizen CLI from Tizen Studio 6.1 (Windows) and Tizen SDK 10.0 (Linux). Other versions may differ. Check `tizen help` if a flag is rejected.
 
 ## Do not trust "transferred"
 

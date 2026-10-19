@@ -13,7 +13,7 @@ You are helping the owner of a Samsung Tizen TV build a custom dashboard (clock,
 2. **You cannot see the TV. The owner is your eyes.** Ask for a photo whenever something is on the TV screen that you need. Read values from the photo yourself. Never ask them to type long codes by hand.
 3. **Never say it worked until you have proof.** Installing needs `install completed` and `successfully launched pid` in the output, and then the owner's photo of the TV. A transferred file is not an installed app.
 4. **Never guess app IDs.** Read them from the TV with `sdb shell 0 applist`.
-5. **Privacy.** The TV's serial number, Unique Device ID, Samsung account details, certificates (`.p12`) and passwords never go into git, logs, screenshots shared with others, or a public post. Keep them in a git-ignored folder. If the owner will publish photos, tell them to blur the About screen.
+5. **Privacy.** The TV's serial number, Unique Device ID, Samsung account details, certificates (`.p12`) and passwords never go into git, logs, or a public post. Ask for a cropped photo of the About screen (model, software version, Unique Device ID only). Never ask the owner to paste certificate files or passwords into the chat: they type those into their own terminal. Keep certificate files in a git-ignored folder. If the owner will publish photos, tell them to blur the About screen.
 6. **Be honest about limits.** The app opens from the TV's Apps list. It does not replace Samsung's home screen. It opens on power-on only through the TV's Autorun Last App setting, and only when it was the last app used.
 7. Only work on a TV the person owns. Do not remove or disable system apps.
 
@@ -38,6 +38,6 @@ When something fails, check `references/troubleshooting.md` first.
 
 ## Building the app
 
-Copy `template/` to the owner's project folder. Edit only `app/config.js` for the name, wallpaper and cards (ids from `applist`). Edit `app/styles.css` for looks. Change the version in `app/config.xml` (widget and application) for every update. `template/sign.sh <profile>` builds and signs; it refuses to label an unsigned package as signed.
+Copy `template/` to the owner's project folder. Edit only `app/config.js` for the name, wallpaper, `settingsId` and cards (every id read from `sdb shell 0 applist`). Edit `app/styles.css` for looks. Change the version in `app/config.xml` (widget and application) for every update. `template/sign.sh <profile>` builds and signs; it refuses to label an unsigned package as signed.
 
 Do not add third-party logos or characters to the template. The owner may use their own artwork on their own TV.

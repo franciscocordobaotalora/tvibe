@@ -37,7 +37,7 @@
   function setWallpaper() {
     if (WALLPAPERS.length === 0) return;
     var now = new Date();
-    var idx = now.getMinutes() % WALLPAPERS.length;
+    var idx = Math.floor(now.getTime() / (5 * 60 * 1000)) % WALLPAPERS.length;
     var img = document.getElementById("background");
     img.style.backgroundImage = "url('" + WALLPAPERS[idx] + "')";
     img.style.opacity = 1;
@@ -172,11 +172,13 @@
 
   // ---- Settings -> native TV settings ----------------------------------
   function openSettings() {
-    var SETTINGS_ID = "com.samsung.tv.coba.setting";
+    var SETTINGS_ID = (window.CONFIG && CONFIG.settingsId) || "";
+    var hint = document.getElementById("hero-hint");
+    if (!SETTINGS_ID) { hint.textContent = "Set settingsId in config.js (see sdb shell 0 applist)"; return; }
     if (tizen && tizen.application) {
       tizen.application.launch(SETTINGS_ID,
         function () { /* opened settings */ },
-        function () { /* could not open settings */ }
+        function () { hint.textContent = "Could not open Settings. Check settingsId in config.js"; }
       );
     }
   }
