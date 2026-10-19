@@ -4,6 +4,8 @@
 
 Born from one afternoon on a real Samsung TV. Samsung first. Android TV and LG next.
 
+![Before and after: Samsung's home screen, then the custom dashboard](docs/images/before-after.jpg)
+
 > Made by **Francisco Cordoba Otalora** ([@fcordobaot](https://x.com/fcordobaot)).
 
 ## What you get
@@ -28,6 +30,34 @@ You do the physical steps on the TV. The LLM does everything else. At every step
 | 8 | Test on the real TV | [prompts/08-test-on-the-real-tv.md](prompts/08-test-on-the-real-tv.md) |
 | 9 | Polish by asking | [prompts/09-polish.md](prompts/09-polish.md) |
 | 10 | Open on power on | [prompts/10-open-on-power-on.md](prompts/10-open-on-power-on.md) |
+
+## See the whole process
+
+![The ten steps](docs/images/process.jpg)
+
+Real photos from the TV this came from, in order.
+
+**Step 2, Developer Mode.** The 123 button on the Samsung remote does not type numbers. Use the number pad in the SmartThings phone app, then switch the panel to On and enter your computer's IP address.
+
+![Phone remote number pad](docs/images/step-02-phone-keypad.jpg)
+
+![The Developer Mode panel on the TV](docs/images/step-02-developer-mode.jpg)
+
+**Step 6, same WiFi.** Your computer must reach the TV. The TV's network settings are under Settings, Connection, Network.
+
+![Connection settings on the TV](docs/images/step-06-network-settings.jpg)
+
+**Step 8, test on the real TV.** The first version looked right and every card said "Cannot open". The app IDs were placeholders. Photos like this one are how the AI finds and fixes problems.
+
+![A card that cannot open its app](docs/images/step-08-wrong-app-id.jpg)
+
+**Step 10, open on power on.** Settings, General and Privacy, Start Screen Options. Turn off Start with Smart Hub Home and turn on Autorun Last App.
+
+![Start Screen Options](docs/images/step-10-start-screen-options.jpg)
+
+**The template.** What you get out of the box, before you add your own wallpaper and apps (rendered here in a desktop browser).
+
+![The template dashboard](docs/images/template-render.jpg)
 
 ## Quick start
 
