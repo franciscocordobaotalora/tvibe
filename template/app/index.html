@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TvibeDash</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="background"></div>
+    <div id="scrim"></div>
+
+    <div id="status-row">
+        <div id="greeting"></div>
+        <div id="time-container">
+            <span id="time"></span>
+            <span id="ampm"></span>
+            <span id="separator">|</span>
+            <span id="date"></span>
+        </div>
+    </div>
+
+    <div id="badges">
+        <div id="wifi-badge"><span id="wifi-icon">●</span><span id="wifi-text">Network</span></div>
+        <button id="settings-button"><span class="settings-icon">⚙</span><span>Settings</span></button>
+    </div>
+
+    <div id="hero"><div id="hero-title"></div><div id="hero-hint">Press OK to open</div></div>
+
+    <div id="dock-wrap"><div id="dock-label">APPS</div><div id="app-dock"></div></div>
+
+    <script src="config.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,7 @@
+build/
+*.wgt
+signing/
+*.p12
+*.pwd
+*.pfx
+.env

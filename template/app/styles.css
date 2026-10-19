@@ -1,0 +1,30 @@
+* { box-sizing: border-box; }
+html, body { margin: 0; width: 100%; height: 100%; overflow: hidden; background: #101820; color: #fff; font-family: Arial, sans-serif; }
+#background, #scrim { position: absolute; inset: 0; }
+#background { background-size: cover; background-position: center; transition: opacity .5s ease; }
+#scrim { background: linear-gradient(to bottom, rgba(5,16,24,.73) 0%, rgba(5,16,24,.12) 34%, rgba(5,16,24,.16) 56%, rgba(5,16,24,.82) 100%); }
+#status-row { position: absolute; z-index: 2; left: 5.2%; top: 7.2%; text-shadow: 0 2px 14px #000; }
+#greeting { font-size: 26px; font-weight: 700; letter-spacing: 3px; margin-bottom: 12px; }
+#time-container { display: flex; align-items: baseline; gap: 14px; white-space: nowrap; }
+#time { font-size: 74px; font-weight: 300; letter-spacing: -3px; }
+#ampm { font-size: 24px; }
+#separator { color: rgba(255,255,255,.55); font-size: 38px; margin: 0 8px; }
+#date { font-size: 24px; font-weight: 600; letter-spacing: 1px; }
+#badges { position: absolute; z-index: 2; right: 5.2%; top: 7.6%; display: flex; gap: 16px; }
+#wifi-badge, #settings-button { height: 56px; padding: 0 25px; display: flex; align-items: center; gap: 12px; color: #fff; font: 600 23px Arial, sans-serif; border: 1px solid rgba(255,255,255,.28); border-radius: 30px; background: rgba(5,18,28,.46); }
+#wifi-icon { font-size: 17px; color: #65ecb4; }
+#settings-button { cursor: pointer; }
+#settings-button:focus, #settings-button:hover { outline: none; background: rgba(255,255,255,.3); box-shadow: 0 0 0 3px #fff; }
+.settings-icon { font-size: 30px; line-height: 1; }
+#hero { position: absolute; z-index: 2; left: 5.2%; bottom: 34%; text-shadow: 0 3px 20px rgba(0,0,0,.7); }
+#hero-title { font-size: 72px; font-weight: 700; line-height: 1.08; }
+#hero-hint { margin-top: 12px; font-size: 24px; color: rgba(255,255,255,.85); }
+#dock-wrap { position: absolute; z-index: 2; left: 4.2%; right: 4.2%; bottom: 6%; padding: 27px 28px 30px; border: 1px solid rgba(255,255,255,.2); border-radius: 32px; background: rgba(9,22,29,.48); box-shadow: 0 18px 50px rgba(0,0,0,.28); }
+#dock-label { font-size: 21px; letter-spacing: 4px; font-weight: 700; margin: 0 0 21px 7px; color: rgba(255,255,255,.94); }
+#app-dock { display: flex; gap: 18px; width: 100%; }
+.app-card { min-width: 0; width: 20%; height: 176px; display: flex; align-items: center; justify-content: center; gap: 11px; padding: 14px; border-radius: 22px; background: #1f4e8c; color: #fff; cursor: pointer; outline: none; transition: transform .18s ease, box-shadow .18s ease; box-shadow: 0 9px 20px rgba(0,0,0,.17); }
+.app-card .app-name { font-size: 29px; font-weight: 700; white-space: nowrap; }
+.app-card.selected, .app-card:focus { transform: translateY(-8px); box-shadow: 0 0 0 5px #fff, 0 17px 32px rgba(0,0,0,.43); }
+
+.app-card .app-name { text-shadow: 0 2px 7px rgba(0,0,0,.5); }
+@media (max-width: 1400px) { #time { font-size: 58px; } #date { font-size: 20px; } #hero-title { font-size: 58px; } .app-card { height: 140px; } .app-card .app-name { font-size: 22px; } }

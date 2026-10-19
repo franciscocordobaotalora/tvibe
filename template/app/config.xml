@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<widget xmlns="http://www.w3.org/ns/widgets"
+        xmlns:tizen="http://tizen.org/ns/widgets"
+        id="https://github.com/franciscocordobaotalora/tvibe/TvibeDash"
+        version="1.0.0"
+        run-on="all">
+
+  <name>TvibeDash</name>
+  <description>Custom TV dashboard</description>
+
+  <!-- package: exactly 10 letters or digits. Change both ids together if you rename. -->
+  <tizen:application
+      id="TVIBEDASH1.TvibeDash"
+      package="TVIBEDASH1"
+      version="1.0.0"
+      required_version="7.0"/>
+
+  <content src="index.html" src-language="en"/>
+  <icon src="icon/icon.png"/>
+
+  <feature name="http://tizen.org/feature/screen.size.normal.1080"/>
+  <feature name="http://tizen.org/feature/screen.normal.type.hd"/>
+
+  <tizen:privilege name="http://tizen.org/privilege/internet"/>
+  <tizen:privilege name="http://tizen.org/privilege/application.launch"/>
+  <tizen:privilege name="http://developer.samsung.com/privilege/network.public"/>
+
+  <tizen:setting background-color="black" context-menu="enable" screen-orientation="landscape"/>
+  <tizen:profile name="tv"/>
+</widget>
