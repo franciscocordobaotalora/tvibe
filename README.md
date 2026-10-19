@@ -33,6 +33,10 @@ You do the physical steps on the TV. The LLM does everything else. At every step
 
 ## See the whole process
 
+The result, on a real TV:
+
+![The finished dashboard on a Samsung TV](docs/images/dashboard-on-tv.jpg)
+
 ![The ten steps](docs/images/process.jpg)
 
 Real photos from the TV this came from, in order.
