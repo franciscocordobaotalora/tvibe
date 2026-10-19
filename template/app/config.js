@@ -7,7 +7,7 @@ var CONFIG = {
   wallpapers: ["assets/sample-wallpaper.png"],
 
   // Application ID of the TV's own Settings app, read from your TV with: sdb shell 0 applist
-  // Leave empty to disable the Settings button.
+  // Leave empty and the Settings button only shows a hint telling you to set it.
   settingsId: "",
 
   // One card per app, in order. Any number from 3 to 6 fits.

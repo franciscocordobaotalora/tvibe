@@ -31,7 +31,7 @@ You do the physical steps on the TV. The LLM does everything else. At every step
 
 ## Quick start
 
-You need: a Samsung smart TV that runs Tizen, a computer on the same WiFi, a free Samsung developer account, and an LLM coding agent that can run commands.
+You need: a Samsung smart TV that runs Tizen, a computer on the same WiFi, a free Samsung developer account, and an LLM coding agent that can run commands and read images (for photos of your TV).
 
 1. Clone this repo.
 2. Give your agent [`SKILL.md`](SKILL.md). If it supports skills, put the folder in its skills directory. Otherwise paste the file in.
@@ -64,6 +64,10 @@ The manifest and CLI commands are the ones that worked on the TV above. Samsung'
 - Keep your certificates (`.p12`), passwords and your TV's Unique Device ID private. The `.gitignore` here blocks the certificate files.
 - This project is not affiliated with or endorsed by Samsung. Samsung and Tizen are trademarks of their owners. The template ships no third-party logos or artwork.
 - Provided as is, without warranty. You are responsible for what you install on your TV.
+
+## Credits
+
+The sample wallpaper is an AI-generated image made by the author and released under the same MIT license.
 
 ## License
 

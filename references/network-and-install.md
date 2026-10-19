@@ -22,7 +22,7 @@ Syntax shown here worked with the Tizen CLI from Tizen Studio 6.1 (Windows) and 
 
 ## Do not trust "transferred"
 
-A plain `sdb install` can copy the file and install nothing. Success needs **both** lines in the output:
+A plain `sdb install` can copy the file and install nothing. Success needs both of these. The first comes from `tizen install`, the second from `tizen run`:
 
 - `install completed`
 - `successfully launched pid`
